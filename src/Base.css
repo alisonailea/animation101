@@ -1,0 +1,46 @@
+body, html {
+  font-size: 12px;
+}
+
+.App {
+}
+
+.Background-image {
+  display: block;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 1;
+}
+
+.App-content {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  top: 15px;
+  left: 60px;
+  right: 60px;
+  bottom: 15px;
+  position: fixed;
+
+  z-index: 2;
+  padding: 15px 9px;
+}
+
+
+.App-header {
+  font-weight: bold;
+  font-size: 2rem;
+  height: 50px;
+  width: 100vw;
+  color: white;
+}
+
+.App-animations {}
+
+.Button {
+  margin: 15px;
+}
+
