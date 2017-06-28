@@ -3,6 +3,7 @@ import Button from 'lucid-ui/Button';
 import bgImg from './1.jpg';
 import '../node_modules/lucid-ui/dist/index.css';
 import './Base.css';
+import './App.css';
 
 class App extends Component {
   render() {
