@@ -14,7 +14,6 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "classnames": "^2.2.5",
     "lucid-ui": "^2.19.2"
   }
 }
