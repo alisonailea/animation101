@@ -1,6 +1,3 @@
-body, html {
-  font-size: 12px;
-}
 
 .App {
 }
@@ -28,7 +25,6 @@ body, html {
   z-index: 2;
   padding: 15px 9px;
 }
-
 
 .App-header {
   font-weight: bold;

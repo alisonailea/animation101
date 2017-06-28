@@ -4,7 +4,7 @@ import Button from 'lucid-ui/Button';
 import bgImg from './1.jpg';
 import '../node_modules/lucid-ui/dist/index.css';
 import './Base.css';
-import './transitionAnimation.css';
+import './keyframeAnimation.css';
 
 const cx = classNames;
 
@@ -13,12 +13,16 @@ class App extends Component {
 		super(props);
 
 		this.state = {
-			isHovered: false,
+			animateBackground: false,
+      animateButton: false,
 		};
 	}
 
-  setHover() {
-		this.setState({ isHovered: !this.state.isHovered });
+  setBackground() {
+		this.setState({ animateBackground: !this.state.animateBackground });
+	}
+  setButton() {
+		this.setState({ animateButton: !this.state.animateButton });
 	}
 
   render() {
@@ -28,21 +32,32 @@ class App extends Component {
           src={bgImg}
           className='Background-image'
           className={cx('Background-image', {
-						'Background-image-blur': this.state.isHovered,
+						'Background-image-blur': this.state.animateBackground,
 					})}
           alt="an image of blured lines connecting buildings across a city"
         />
         <div className='App-content'>
           <div className="App-header">
             <h2
-              onMouseEnter={() => this.setHover()}
-              onMouseLeave={() => this.setHover()}
+              onMouseEnter={() => this.setBackground()}
+              onMouseLeave={() => this.setBackground()}
             >
               Animation 101
             </h2>
           </div>
           <div className="App-animations">
-            <Button className='Button'>Animate!</Button>
+            <Button
+              className='Button'
+              onMouseEnter={() => this.setButton()}
+              onMouseLeave={() => this.setButton()}
+              className={cx('Button', {
+                'Button_hover': this.state.animateButton,
+              })}>Animate!</Button>
+
+            <h3>Additonal Resources</h3>
+            <p classname='text'>
+              <a href="https://github.com/daneden/animate.css/">https://github.com/daneden/animate.css/</a>
+            </p>
           </div>
         </div>
 
